@@ -2,6 +2,7 @@
   "name": "slud_front_xxi",
   "version": "0.1.0",
   "private": true,
+  "rootDir": "src",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
