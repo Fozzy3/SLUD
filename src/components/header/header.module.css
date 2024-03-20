@@ -1,0 +1,7 @@
+.slud_header {
+    background-color: var(--blue_dark);
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+    position: static;
+}

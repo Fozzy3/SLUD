@@ -1,0 +1,26 @@
+.start_section {
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    padding: 5% 10%;
+    justify-content: center;
+    background-image: url('../../public/fondoSponsors.svg');
+}
+
+.start_section_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    margin-right: 2%;
+}
+
+.sponsor_section {
+    background-image: url('../../public/fondoSponsors.svg');
+}
+
+.main_wrapper{
+    display: flex;
+    flex-direction: column;
+}
