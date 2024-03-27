@@ -1,3 +1,26 @@
 .speakers_section {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2% 20%;
+}
+
+.speaker_info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 5% 2%;
+}
+
+.speaker_info h1 {
+    color: var(--blue_light);
+    margin-bottom: 1rem;
+}
+
+.speaker_info p {
+    color: black;
 }

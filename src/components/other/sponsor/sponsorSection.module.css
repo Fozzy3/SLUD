@@ -1,12 +1,16 @@
 .sponsor_section {
-    background-image: url('../../../../public/fondoSponsors.svg');
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: var(--blue_dark);
+    padding: 2% 20%;
 }
 
 .sponsor_section_title {
-    color: var(--blue_light);
+    color: var(--green_light);
+    margin-bottom: 1rem;
+}
+
+.sponsor_section p {
+    color: white;
 }

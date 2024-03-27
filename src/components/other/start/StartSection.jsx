@@ -16,7 +16,7 @@ const StartSection = () => {
                 </p>
             </div>
             <div className={`${styles.start_section_image}`}>
-                <Image src="/data_2.png"
+                <Image src="/data.png"
                     height={200}
                     width={200}
                     alt="slud logo"
