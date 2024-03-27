@@ -1,0 +1,20 @@
+.start_section {
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    padding: 5% 10%;
+    justify-content: center;
+    background-image: url('../../../../public/fondoSpeakers.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.start_section_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    margin-right: 2%;
+}
+

@@ -1,5 +1,6 @@
 import "./globals.css";
-import Header from '../components/header/Header';
+import Header from '../components/shared/header/Header';
+import Footer from '../components/shared/footer/Footer';
 
 export const metadata = {
   title: "SLUD XXI",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header></Header>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

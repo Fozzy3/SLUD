@@ -1,0 +1,12 @@
+.sponsor_section {
+    background-image: url('../../../../public/fondoSponsors.svg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sponsor_section_title {
+    color: var(--blue_light);
+}
