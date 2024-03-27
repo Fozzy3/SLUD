@@ -1,0 +1,18 @@
+.sponsor_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 20%;
+    position: relative; /* Para poder posicionar el contenido sobre el fondo */
+    /*background: rgba(2,73,89,0.74) url("../../../../public/fondoSponsors.svg") no-repeat fixed 1px 0px;*/
+    background: linear-gradient(36deg, #0378A6 0%, #038c5a 23%, #024959 100%);
+}
+
+.sponsor_section_title {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.sponsor_section p {
+    color: white;
+}
