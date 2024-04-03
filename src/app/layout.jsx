@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from '../components/shared/header/Header';
 import Footer from '../components/shared/footer/Footer';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 export const metadata = {
   title: "SLUD XXI",
@@ -9,11 +10,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className="overflow-x-hidden">
-        <Header></Header>
-        {children}
-        <Footer></Footer>
+        <AppRouterCacheProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
