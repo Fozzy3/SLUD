@@ -1,6 +1,11 @@
 import { Container } from 'postcss';
+import Slider from "react-slick";
 import React from 'react';
 import styles from './editionsSection.module.css';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 
 const images =[ "https://imgs.search.brave.com/93WPlIentJsEiXaooiW9JNzPz0alef3H6mqIXsMGauM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWdj/LmFydHByaW50aW1h/Z2VzLmNvbS9pbWcv/cHJpbnQvdS1sLUY0/UzhOTzAuanBnP2Fy/dEhlaWdodD01NTAm/YXJ0UGVyc3BlY3Rp/dmU9biZhcnRXaWR0/aD01NTAmYmFja2dy/b3VuZD1mYmZiZmI",
 "https://imgs.search.brave.com/6EyYMib7-z1ArkErmNSmVv_C7kXFDYYgTmPOe9jsDng/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzBiLzJk/Lzk5LzBiMmQ5OTg3/MzgyMmI3MmJkMTdh/OTMyMzk4YWNhMmIw/LmpwZw",
@@ -9,27 +14,28 @@ const images =[ "https://imgs.search.brave.com/93WPlIentJsEiXaooiW9JNzPz0alef3H6
 ]
 
 const EditionsSection = () => {
-    //variables y estados
-    const currentImage = 0;
-    //const [currentImage,setCurrentImage]= React.useState(0);
-    const numImg = images?.length;
+    var settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      };
 
     return <>
         <section className={`${styles.editions_section}`}>
             <h1 className={`${styles.editions_section_title} bg-clip-text text-5xl font-bold lg:tracking-tight xl:tracking-tighter`}>Ediciones</h1>
             <p>conoce nuestras anteriores ediciones</p>
             <div className={`${styles.editions_images_container}`}>
+            <Slider {...settings}>
             {images.map((image,index)=>{
-                return(
-                    <div className={`${styles.editions_image}`}>
-                        {currentImage == index &&(
-                            <img className={`${styles.editions_image}`} key={index} src={image} alt="image"/>
-                        )
-                        }
-                    </div>
-                )
-            })
-            }
+            return(
+                <div className={`${styles.editions_image}`}>
+                    <img className={`${styles.editions_image}`} key={index} src={image} alt="image"/>
+                </div>
+            )
+            })}
+            </Slider>
             </div>
             <button className={`${styles.editions_button_left}`}> ⭠</button>
                 <button className={`${styles.editions_button_right}`}>⮕</button>
