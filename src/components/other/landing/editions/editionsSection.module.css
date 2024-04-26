@@ -68,7 +68,8 @@
 
 }
 .editions_image{
-    width: 100%;
-    height:auto;
-    margin:7%;
+
+    /*max-width: 85%;*/
+    height:50vh;
+    margin:5%;
 }
