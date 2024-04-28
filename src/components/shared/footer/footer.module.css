@@ -21,8 +21,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  list-style-image: url("../../../../public/cube_in_cube_v3.svg");
-  list-style-image: linear-gradient(to right bottom, rgb(60, 105, 126), #03333e);
 
   /* definicion de fuente de texto */
   font-family: "Silkscreen","Baskervville","Audiowide","Pixelify Sans", sans-serif;
@@ -41,25 +39,18 @@
 .footer_up {
   background: linear-gradient(45deg, #08708725 0%, #02495910 20%, #03323c50 50%, #02495910 80%, #08708725 100%);
   width: auto;
-  min-height: 35px;
-  margin: 20 auto;
-  padding: 20px 0;
+  min-height: auto;
+  margin: 10 auto;
+  padding: 10px 0;
 
   color: #A3D9C5;
   text-align: center;
-}
-.top h3 {
-  font-weight: 700;
-  font-size: 25px;
-}
-.top h2 {
-  font-size: 15px;
 }
 .footer_up img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 150px;
+  width: 300px;
   height: auto;
 }
 
@@ -76,26 +67,20 @@
   justify-content: space-between;
 }
   
-/* definicion de dimensiones de la clase footer-links*/
-.footer_links {
-  width: 50vm;
-  padding: 15px 15px;
-}
-  
 /* definicion de dimensiones y texto de la clase footer-links*/
 .footer_links h4{
-  font-size: 20px;
+  font-size: 16px;
   color: #A3D9C5;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   font-weight: 500;
   border-bottom: 2px solid #0378A6;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   display: inline-block;
 }
   
 /* caracteristicas de las listas y lo que aparece al pasar el raton por encima*/
 .footer_links ul li a {
-  font-size: 18px;
+  font-size: 14px;
   text-decoration: none;
   color: #A3D9C5;
   display: blick;
@@ -110,14 +95,14 @@
 }
   
 .footer_links img {
-  width: 150px;
+  width: 100px;
   margin-left: 20%;
   padding-left: 1.8vw;
 }
 
 /* caracteristicas de los enlaces en las listas (el contenedor donde estan) */
 .social_links a{
-  
+  padding-left: 2%;
   display: inline-block;
   
   min-height: 10vm;
@@ -156,9 +141,13 @@
   line-height: 60px;
   border-radius: 50%;
   
-  font-size: 12px;
+  font-size: 10px;
   color: #A3D9C5;
   font-weight: 500;
   border-bottom: 1px solid #3f98a4;
   padding-bottom: 0px;
+}
+
+.listas{
+  list-style-image: url("../../../../public/cube_in_cube_v3.svg");
 }
