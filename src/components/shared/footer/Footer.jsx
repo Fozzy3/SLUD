@@ -1,4 +1,5 @@
 import styles from '@/components/shared/footer/footer.module.css';
+import { list } from 'postcss';
 
 const Footer = () => {
   return (
