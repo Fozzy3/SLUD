@@ -27,7 +27,7 @@ const Header = () => {
               Sponsors
             </span>
           </Link>
-          <Link href="/conferencia">
+          <Link href="/conference">
             <span className="font-bold block mt-4 md:inline-block md:mt-0 text-teal-200 hover:text-white">
               Conferencia
             </span>
