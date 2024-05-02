@@ -1,0 +1,153 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css");
+@import url("https://fonts.googleapis.com");
+@import url("https://fonts.gstatic.com");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Baskervville:ital@0;1&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap");
+
+
+.footer {
+
+  position: absolute;
+  min-height: 35vh;
+  min-width: 100vw;
+  left: 0px;
+
+
+  background-color: #024959;
+  position: relative;
+  width: 100vm;
+  padding: 20px 0;
+
+  /* definicion de caracteristicas generales */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* definicion de fuente de texto */
+  font-family: "Silkscreen","Baskervville","Audiowide","Pixelify Sans", sans-serif;
+  text-transform: capitalize;  
+  font-style: normal;
+  color: #A3D9C5;
+}
+  
+/* tamanio del contenedor del contenido del footer */
+.container_footer {
+  width: auto;
+  margin: 0 auto;
+}
+
+  
+.footer_up {
+  background: linear-gradient(45deg, #08708725 0%, #02495910 20%, #03323c50 50%, #02495910 80%, #08708725 100%);
+  width: auto;
+  min-height: auto;
+  margin: 10 auto;
+  padding: 10px 0;
+
+  color: #A3D9C5;
+  text-align: center;
+}
+.footer_up img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  height: auto;
+}
+
+.top{
+  margin-right: 60px;
+}
+
+/* definicion del comportamiento de las listas (estan en este div) */
+.footer_row {
+  padding: 8px 150px;
+  background: linear-gradient(45deg, #03323c25 0%, #02495910 20%, #08708720 50%, #02495910 80%, #03323c25 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+  
+/* definicion de dimensiones y texto de la clase footer-links*/
+.footer_links h4{
+  font-size: 16px;
+  color: #A3D9C5;
+  margin-bottom: 15px;
+  font-weight: 500;
+  border-bottom: 2px solid #0378A6;
+  padding-bottom: 5px;
+  display: inline-block;
+}
+  
+/* caracteristicas de las listas y lo que aparece al pasar el raton por encima*/
+.footer_links ul li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #A3D9C5;
+  display: blick;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+  
+/* animacion de al tener el raton sobre el texto */
+.footer_links ul li a:hover {
+  color: #2ABF6B;
+  padding-left: 1.8%;
+}
+  
+.footer_links img {
+  width: 100px;
+  margin-left: 20%;
+  padding-left: 1.8vw;
+}
+
+/* caracteristicas de los enlaces en las listas (el contenedor donde estan) */
+.social_links a{
+  padding-left: 2%;
+  display: inline-block;
+  
+  min-height: 10vm;
+  width: 10vm;
+  background-color: none;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #A3D9C5;
+  transition: all .5s ease;
+}
+  
+/* fondo de resaltado al pasar el raton por encima */
+.social_links a:hover{
+  background-color: #038C5A;
+}
+  
+/* hoja de estilo de medios y modificacon */
+@media(max-width:100%){
+  .footer_row{
+    text-align: center;
+  }
+  .footer_links{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+  
+.foondo {
+  min-height: 10vm;
+  width: 10vm;
+  background-color: none;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  
+  font-size: 10px;
+  color: #A3D9C5;
+  font-weight: 500;
+  border-bottom: 1px solid #3f98a4;
+  padding-bottom: 0px;
+}
+
+.listas{
+  list-style-image: url("../../../../public/cube_in_cube_v3.svg");
+}
