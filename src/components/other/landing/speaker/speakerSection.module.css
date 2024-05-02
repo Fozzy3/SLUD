@@ -40,6 +40,10 @@
     display: none;
 }
 
+.speakerContainer p {
+    margin-bottom: 10vh;
+}
+
 .speakerCard {
     width: 15rem;
     border: 1px solid #ccc;
