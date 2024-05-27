@@ -1,7 +1,29 @@
+/* header.module.css */
 .slud_header {
     background-color: var(--blue_dark);
     display: flex;
     flex-direction: row;
-    padding: 1vw;
+    padding: 0.5vw;
     position: static;
+    align-items: center;
+}
+
+.slud_header_image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slud_intro_section {
+    flex-grow: 1;
+}
+
+.slud_links_menu a {
+    transition: color 0.3s ease;
+}
+
+.items_menu{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

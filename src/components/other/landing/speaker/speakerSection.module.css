@@ -51,6 +51,7 @@
     margin: 1rem;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
+    padding: auto 20px;
 
 }
 
@@ -66,8 +67,8 @@
 }
 
 .speakerImage {
-    width: 5rem;
-    height: 5rem;
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
     margin-bottom: 0.5rem;
 }

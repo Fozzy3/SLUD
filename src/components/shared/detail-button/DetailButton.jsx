@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import styles from './detailButton.module.css';
 
-const DetailButton = ({ children, link, color }) => {
+const DetailButton = ({ children, link, bgColor, color }) => {
     return <>
-        <button style={{ backgroundColor: `var(--${color})` }} className={`${styles.detail_button}`}>
-            <Link href={`${link}`}>
+        <button style={{ backgroundColor: `var(--${bgColor})`,color:`${color}` }} className={`${styles.detail_button}`}>
+            <Link style={{ color:`${color}` }} href={`${link}`}>
                 {children}
             </Link>
         </button>

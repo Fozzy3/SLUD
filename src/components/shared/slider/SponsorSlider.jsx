@@ -3,39 +3,10 @@ import { useState } from 'react';
 import styles from './SponsorSlider.module.css'
 import SponsorCard from './SponsorCard';
 
-const sponsors = [
-  {
-    id: 1,
-    name: "",
-    imgUrl: "https://images.pexels.com/photos/21405346/pexels-photo-21405346/free-photo-of-ciudad-puesta-de-sol-agua-panorama-urbano.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    imgAlt: "alt"
-  },
-  {
-    id: 2,
-    name: "",
-    imgUrl: "https://images.pexels.com/photos/18651005/pexels-photo-18651005/free-photo-of-ciudad-coches-calle-edificios.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    imgAlt: "alt"
-  },
-  {
-    id: 3,
-    name: "",
-    imgUrl: "https://images.pexels.com/photos/21660419/pexels-photo-21660419/free-photo-of-u-bahnhof-hafencity-universitat-en-hamburgo-4.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    imgAlt: "alt"
-  },
-  {
-    id: 4,
-    name: "",
-    imgUrl: "https://images.pexels.com/photos/11114529/pexels-photo-11114529.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
-    imgAlt: "alt"
-  },
-];
-
-
-
-const SponsorSlider = () => {
+const SponsorSlider = ({ data }) => {
 
   const [itemActive, setItemActive] = useState(0);
-  const countItem = sponsors.length;
+  const countItem = data.length;
   const prev = () => {
     setItemActive(itemActive - 1)
     if (itemActive === 0) {
@@ -50,7 +21,7 @@ const SponsorSlider = () => {
   };
   return (
     <div className={`${styles.containerCard}`}>
-      <SponsorCard imgUrl={sponsors[itemActive].imgUrl} imgAlt={sponsors[itemActive].imgAlt}></SponsorCard>
+      <SponsorCard imgUrl={data[itemActive].url} imgAlt={data[itemActive].name}></SponsorCard>
       <div className={`${styles.container_butons} py-5`}>
         <button onClick={prev} className={`w-1/2 h-10 px-7 transition hover:-translate-y-1 hover:-translate-x-0.5 hover:scale-110`}>
           <svg
