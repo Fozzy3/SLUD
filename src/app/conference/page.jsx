@@ -1,5 +1,6 @@
 import ConferenceCard from './ConferenceCard';
 import styles from './conference.module.css'
+import Image from 'next/image';
 
 const ConferencePage = () => {
     const conferencistas = [
@@ -77,24 +78,32 @@ const ConferencePage = () => {
       
       return (
         <section className={styles.conferences}>
-            {conferencistas.length === 0 ? (
-                <p>¡Inscríbete para presentar tu conferencia!</p>
-            ) : (
-                conferencistas.map((conferencista, index) => (
-                    <div key={index} className={styles.conferencesCard}>
-                        <h2 className="text-center font-bold text-xl text-[#024959] leading-loose"><span>Día {index+1} - </span>{conferencista.fecha}</h2>
-                        {conferencista.eventos.map((evento, idx) => (
-                            <ConferenceCard 
-                                key={idx} 
-                                name={evento.nombre} 
-                                time={evento.hora} 
-                                description={evento.descripcion}
-                            />
-                        ))}
-                    </div>
-                ))
+          <div className="flex flex-col items-center justify-center p-16">
+            <div className={`${styles.start_section_image}`}>
+              <Image src="/data.png" height={100} width={100} alt="slud logo" />
+            </div>
+            <h1 className="font-bold text-4xl leading-snug leading-loose text-center">
+              ¡Estos son los eventos que tenemos para ti en la SLUD!
+            </h1>
+          </div>
+          {conferencistas.length === 0 ? (
+              <p>¡Inscríbete para presentar tu conferencia!</p>
+          ) : (
+            conferencistas.map((conferencista, index) => (
+                <div key={index} className={styles.conferencesCard}>
+                    <h2 className="rounded-t-lg text-center font-bold text-xl text-[#fff] leading-loose bg-[#038C5A]"><span>Día {index+1} - </span>{conferencista.fecha}</h2>
+                    {conferencista.eventos.map((evento, idx) => (
+                        <ConferenceCard 
+                            key={idx} 
+                            name={evento.nombre} 
+                            time={evento.hora} 
+                            description={evento.descripcion}
+                        />
+                    ))}
+                </div>
+              ))
             )}
-        </section>
+          </section>
 
     );
     

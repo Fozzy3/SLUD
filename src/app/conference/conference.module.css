@@ -9,8 +9,11 @@
 }
 
 .conferencesCard {
-    width: 100%; 
-    border: 0.1em solid #024959;
+    width: 95%; 
+    border: 0.1em solid #888888;
+    border-radius: 0.6em;
+    box-shadow: 0 0.5em #038C5A;
+    margin: 1em;
 }
 
 .conferenceContainer::-webkit-scrollbar {
@@ -21,6 +24,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    margin-top: -0.5em;
 }
 
 .conferenceImage {
@@ -34,8 +38,3 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
-
-.conferenceDescription {
-    color: #555;
-}
-
