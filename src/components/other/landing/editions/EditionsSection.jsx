@@ -1,35 +1,40 @@
 'use client'
-import { Container } from 'postcss';
+import { useState } from 'react';
 import images from './images.js'
 import React from 'react';
 import styles from './editionsSection.module.css';
-import Carousel from "react-elastic-carousel";
-
+import { Carousel } from "react-bootstrap";
 
 const EditionsSection = () => {
-    const breakPoints = [
-        { width: 1, itemsToShow: 1 },
-        { width: 550, itemsToShow: 2 },
-        { width: 768, itemsToShow: 3 },
-        { width: 1200, itemsToShow: 4 },
-    ]
-    
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex, e) => {
+        e.preventDefault();
+        setIndex(selectedIndex);
+    };
+
     return <>
         <section className={`${styles.editions_section}`}>
             <h1 className={`${styles.editions_section_title} bg-clip-text text-5xl font-bold lg:tracking-tight xl:tracking-tighter`}>Ediciones</h1>
-            <p>conoce nuestras anteriores ediciones</p>
+            <p>Conoce nuestras anteriores ediciones</p>
             <div className={`${styles.editions_images_container}`}>
-                <Carousel className={`size-full`} breakPoints={breakPoints} enableTilt={true}>
-                    {images.map((image, index) => {
-                        return (
-                            <div className={`${styles.editions_image}`}>
-                                <img className={`${styles.editions_image}`} key={index} src={image} alt="image" />
-                            </div>
-                        )
-                    })}
+                <Carousel
+                    className={styles.carousel_wrapper}
+                    activeIndex={index}
+                    onSelect={handleSelect}
+                >
+                    {images.map(({ image, name, year }) => (
+                        <Carousel.Item key={name} className="w-full h-96 relative" interval={4000}>
+                            <img src={image} alt={`edición-${year}`} className="w-full h-full object-contain" />
+                            <Carousel.Caption className={styles.caption}>
+                                <p>Edición-{year}</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    ))}
                 </Carousel>
             </div>
         </section>
+
+
     </>
 }
 
