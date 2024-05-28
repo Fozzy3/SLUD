@@ -1,16 +1,14 @@
 import styles from '@/components/shared/footer/footer.module.css';
-import { list } from 'postcss';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    
+
     <footer id="footer" className={`${styles.footer}`}>
-
       <div id="container_footer" className={`${styles.container_footer}`}>
-
         <div id="upper_part_footer" className={`${styles.footer_up}`}>
-          <img 
-            src={"./logo_ud_blanco.png"} 
+          <img
+            src={"./logo_ud_blanco.png"}
             alt={"escudo de la universidad distrital"}
           />
         </div>
@@ -50,8 +48,8 @@ const Footer = () => {
 
 
             <a href="https://www.google.com/maps/place/Universidad+Distrital+Calle+40/@4.627963,-74.065937,21z/data=!4m6!3m5!1s0x8e3f9a286d7ef055:0x9cee6f53b8b5f090!8m2!3d4.6279572!4d-74.0659162!16s%2Fg%2F11bw4q7_lt?hl=es&entry=ttu"
-            target="_blank">
-              <img src="./ubicacion.png" alt="enlace a nuestra ubicacion"/>
+              target="_blank">
+              <img src="./ubicacion.png" alt="enlace a nuestra ubicacion" />
             </a>
 
 

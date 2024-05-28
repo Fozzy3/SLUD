@@ -1,14 +1,17 @@
-import React from "react";
-import styles from './speakerSection.module.css'
+import Image from 'next/image';
+import styles from './speakerSection.module.css';
 
 const SpeakerCard = ({ name, description, img }) => {
     return (
         <div className={`${styles.speakerCard} hover:shadow-xl`}>
             <div className={styles.speakerCardContent}>
-                <img
+                <Image
+                    className={styles.speakerImage}
+                    width={200}
+                    height={200}
                     alt={name}
                     src={img}
-                    className={styles.speakerImage}
+
                 />
                 <div className={`${styles.speakerInfo} text-center`}>
                     <p className={styles.speakerName}>{name}</p>

@@ -1,9 +1,10 @@
 'use client';
-import React, { useState, useEffect } from "react";
 import DetailButton from '@/components/shared/detail-button/DetailButton';
-import styles from './sponsorSection.module.css';
 import SponsorSlider from "@/components/shared/slider/SponsorSlider";
+import { useEffect, useState } from "react";
 import { searchSponsors } from '../../../../services/HttpService';
+import styles from './sponsorSection.module.css';
+
 
 const SponsorSection = () => {
   const [sponsorData, setSponsorData] = useState([]);

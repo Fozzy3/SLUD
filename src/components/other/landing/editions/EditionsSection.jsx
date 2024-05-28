@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Carousel } from "react-bootstrap";
 import { searchPastEvents } from '../../../../services/HttpService.js';
@@ -39,10 +40,13 @@ const EditionsSection = () => {
                 >
                     {images.map(({ image, name, year }) => (
                         <Carousel.Item key={name} className="w-full h-96 relative" interval={4000}>
-                            <img src={image} alt={`edición-${year}`} className="w-full h-full object-contain" />
-                            <Carousel.Caption className={styles.caption}>
-                                <p>Edición-{year}</p>
-                            </Carousel.Caption>
+                            <Image
+                                className="w-full h-full object-contain"
+                                src={image} 
+                                alt={`edición-${year}`}
+                                width={150}
+                                height={150}
+                            />
                         </Carousel.Item>
                     ))}
                 </Carousel>

@@ -17,13 +17,12 @@
     flex-grow: 1;
 }
 
-.slud_links_menu a {
+/* Eliminamos esta regla de estilo */
+/*.slud_links_menu a {
     transition: color 0.3s ease;
-}
+  }*/
 
-.items_menu{
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Añadimos estilos para el enlace de navegación */
+.navLink {
+    transition: color 0.3s ease;
 }

@@ -7,10 +7,33 @@
   --blue_dark: #024959;
   --green_dark: #038C5A;
   --green_light: #2ABF6B;
+  --red_light: #FF6347;
+  --red_dark: #8B0000;
+  --yellow_light: #FFD700;
+  --yellow_dark: #FFA500;
+  --purple_light: #9370DB;
+  --purple_dark: #4B0082;
+  --orange_light: #FFA500; /* Orange */
+  --orange_dark: #FF6347; /* Tomato */
+  --pink_light: #FF69B4; /* Hot Pink */
+  --pink_dark: #FF1493; /* Deep Pink */
+  --cyan_light: #00FFFF; /* Cyan */
+  --cyan_dark: #008B8B; /* Dark Cyan */
 }
+
 
 body{
   margin: 0;
   padding: 0;
   background-color: white;
+}
+
+#tsparticles {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
 }

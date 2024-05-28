@@ -5,37 +5,30 @@
 
 
 .footer {
-
-  position: absolute;
   min-height: 35vh;
   min-width: 100vw;
-  left: 0px;
-
-
   background-color: #024959;
-  position: relative;
   width: 100vm;
   padding: 20px 0;
 
   /* definicion de caracteristicas generales */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 
   /* definicion de fuente de texto */
-  font-family: "Silkscreen","Baskervville","Audiowide","Pixelify Sans", sans-serif;
-  text-transform: capitalize;  
+  font-family: "Silkscreen", "Baskervville", "Audiowide", "Pixelify Sans", sans-serif;
+  text-transform: capitalize;
   font-style: normal;
   color: #A3D9C5;
 }
-  
+
 /* tamanio del contenedor del contenido del footer */
 .container_footer {
   width: auto;
   margin: 0 auto;
 }
 
-  
+
 .footer_up {
   background: linear-gradient(45deg, #08708725 0%, #02495910 20%, #03323c50 50%, #02495910 80%, #08708725 100%);
   width: auto;
@@ -46,6 +39,7 @@
   color: #A3D9C5;
   text-align: center;
 }
+
 .footer_up img {
   display: block;
   margin-left: auto;
@@ -54,7 +48,7 @@
   height: auto;
 }
 
-.top{
+.top {
   margin-right: 60px;
 }
 
@@ -66,9 +60,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-  
+
 /* definicion de dimensiones y texto de la clase footer-links*/
-.footer_links h4{
+.footer_links h4 {
   font-size: 16px;
   color: #A3D9C5;
   margin-bottom: 15px;
@@ -77,7 +71,7 @@
   padding-bottom: 5px;
   display: inline-block;
 }
-  
+
 /* caracteristicas de las listas y lo que aparece al pasar el raton por encima*/
 .footer_links ul li a {
   font-size: 14px;
@@ -87,13 +81,13 @@
   margin-bottom: 15px;
   transition: all .3s ease;
 }
-  
+
 /* animacion de al tener el raton sobre el texto */
 .footer_links ul li a:hover {
   color: #2ABF6B;
   padding-left: 1.8%;
 }
-  
+
 .footer_links img {
   width: 100px;
   margin-left: 20%;
@@ -101,10 +95,10 @@
 }
 
 /* caracteristicas de los enlaces en las listas (el contenedor donde estan) */
-.social_links a{
+.social_links a {
   padding-left: 2%;
   display: inline-block;
-  
+
   min-height: 10vm;
   width: 10vm;
   background-color: none;
@@ -115,23 +109,24 @@
   color: #A3D9C5;
   transition: all .5s ease;
 }
-  
+
 /* fondo de resaltado al pasar el raton por encima */
-.social_links a:hover{
+.social_links a:hover {
   background-color: #038C5A;
 }
-  
+
 /* hoja de estilo de medios y modificacon */
-@media(max-width:100%){
-  .footer_row{
+@media(max-width:100%) {
+  .footer_row {
     text-align: center;
   }
-  .footer_links{
+
+  .footer_links {
     width: 100%;
     margin-bottom: 30px;
   }
 }
-  
+
 .foondo {
   min-height: 10vm;
   width: 10vm;
@@ -140,7 +135,7 @@
   text-align: center;
   line-height: 60px;
   border-radius: 50%;
-  
+
   font-size: 10px;
   color: #A3D9C5;
   font-weight: 500;
@@ -148,6 +143,6 @@
   padding-bottom: 0px;
 }
 
-.listas{
+.listas {
   list-style-image: url("../../../../public/cube_in_cube_v3.svg");
 }

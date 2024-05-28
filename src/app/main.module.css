@@ -1,4 +1,11 @@
 .main_wrapper{
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    z-index: 5;
+}
+
+.backgroud{
+    position: relative;
+    z-index: 0;
 }

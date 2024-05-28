@@ -1,3 +1,4 @@
+'use client';
 import styles from './startSection.module.css';
 import Image from 'next/image';
 

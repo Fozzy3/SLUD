@@ -1,34 +1,44 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 import styles from './header.module.css';
 
 const Header = () => {
   return (
-    <header className={`${styles.slud_header} flex justify-between items-center py-4 px-4 md:px-8`}>
-      <section className="flex items-center">
-        <Link href="/" className="block">
-          <Image
-            src="/Logo-GLUD.svg"
-            height={30}
-            width={30}
-            alt="logo glud"
-            className="h-auto"
-          />
-        </Link>
-      </section>
-      <section className={`flex items-center`}>
-        <div className={`flex flex-col md:flex-row items-center w-full md:w-auto`}>
-          <Link href="/tienda" className="font-bold mt-4 md:mt-0 md:ml-4 text-teal-200 hover:text-white px-4 py-2">
-            Tienda
-          </Link>
-          <Link href="/sponsors" className="font-bold mt-4 md:mt-0 md:ml-4 text-teal-200 hover:text-white px-4 py-2">
-            Sponsors
-          </Link>
-          <Link href="/conference" className="font-bold mt-4 md:mt-0 md:ml-4 text-teal-200 hover:text-white px-4 py-2">
-            Conferencia
-          </Link>
-        </div>
-      </section>
+    <header className={styles.slud_header}>
+      <Navbar expand="md" variant="dark" className="w-100">
+        <Container className="d-flex justify-content-between">
+          <Navbar.Brand>
+            <Link href="/" passHref>
+              <div className="d-flex align-items-center">
+                <Image
+                  src="/Logo-GLUD.svg"
+                  height={30}
+                  width={30}
+                  alt="logo glud"
+                  className="h-auto"
+                />
+              </div>
+            </Link>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto d-flex align-items-center">
+              <Link href="/sponsors" passHref>
+                <div className={`${styles.navItem} font-bold text-teal-200 hover:text-white px-4 py-2`}>
+                  Sponsors
+                </div>
+              </Link>
+              <Link href="/conference" passHref>
+                <div className={`${styles.navItem} font-bold text-teal-200 hover:text-white px-4 py-2`}>
+                  Conferencia
+                </div>
+              </Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 };
