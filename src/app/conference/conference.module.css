@@ -2,10 +2,22 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 70%;
-    overflow: auto;
-    scrollbar-width: none;
+    height: 50rem;
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
     -ms-overflow-style: none;
     margin: 2em auto;
+}
+
+.conferences::-webkit-scrollbar {
+    width: 0.5em; /* Ancho del scrollbar */
+    background-color: transparent; /* Fondo transparente */
+}
+
+.conferences::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3); /* Color del thumb (la parte que se arrastra) transparente */
+    border-radius: 10px; /* Bordes redondeados del thumb */
 }
 
 .conferencesCard {
@@ -37,4 +49,54 @@
 .conferenceName {
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+@media (max-width: 992px) {
+    .conferences {
+        max-width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    .conferencesCard {
+        width: 100%;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .conferences {
+        max-width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .conferencesCard {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .conferenceImage {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .conferences {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .conferencesCard {
+        width: 100%;
+        margin: 0.5em 0;
+    }
+
+    .conferenceImage {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .conferenceName {
+        font-size: 1rem;
+    }
 }

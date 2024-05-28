@@ -1,11 +1,7 @@
 /* header.module.css */
 .slud_header {
     background-color: var(--blue_dark);
-    display: flex;
-    flex-direction: row;
-    padding: 0.5vw;
-    position: static;
-    align-items: center;
+    
 }
 
 .slud_header_image img {

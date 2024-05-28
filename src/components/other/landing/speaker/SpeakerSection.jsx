@@ -22,7 +22,7 @@ const SpeakerSection = () => {
                     Participa como conferencista, llena el formulario proponiendo el tema de tu conferencia
                     y el horario de disponibilidad para realizarla.
                 </p>
-                <DetailButton link="/sponsors" bgColor="blue_light" color={'white'}>Inscribete</DetailButton>
+                <DetailButton link={`${process.env.NEXT_PUBLIC_FORM_SPEAKER}`} bgColor="blue_light" color={'white'}>Inscribete</DetailButton>
             </section>
 
         </section>

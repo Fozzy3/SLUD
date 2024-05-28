@@ -37,7 +37,7 @@ export const searchSpeakers = async () => {
   speakers.map((speaker) => {
     if (speaker) {
       const { attributes, id } = speaker;
-      const { full_name, degree ,alias, contact, email, typeOfIdentifier, identifier, image } = attributes;
+      const { full_name, degree, alias, contact, email, typeOfIdentifier, identifier, image } = attributes;
       let url = '';
       if (image.data !== null) {
         url = `https://strapi.glud.org${image.data.attributes.url}`;
@@ -57,5 +57,19 @@ export const searchSpeakers = async () => {
       );
     }
   });
+  return response;
+}
+
+export const searchConferences = async () => {
+  const strapiResponse = await ((await fetch(`${API_URL}/conferences?sort=date`, { method: 'GET' })).json());
+  const response = [];
+  const conferences = strapiResponse.data;
+  conferences.map((conference) => {
+    if (conference) {
+      const { id, attributes } = conference;
+      const { name, description, date, link } = attributes;
+      response.push({ id, name, description, date, link });
+    }
+  })
   return response;
 }
