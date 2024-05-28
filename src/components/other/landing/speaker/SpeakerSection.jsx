@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import styles from './speakerSection.module.css'
 import DetailButton from '@/components/shared/detail-button/DetailButton';
-import SpeakerCard from './SpeakerCard';
+import Card from '@/components/shared/card/Card';
 import { searchSpeakers } from '../../../../services/HttpService';
 
 const SpeakerSection = () => {
@@ -31,7 +31,16 @@ const SpeakerSection = () => {
                 <p>¡Inscríbete para presentar tu conferencia!</p>
             ) : (
                 speakers.map(({ id,full_name,url,degree }) => (
-                    <SpeakerCard key={id} name={full_name} description={degree} img={url} />
+                    <Card 
+                        key={id} 
+                        name={full_name} 
+                        description={degree} 
+                        img={url}
+                        width={"15rem"}
+                        height={"30rem"}
+                        widthImage={200}
+                        heightImage={200}
+                    />
                 ))
             )}
         </section>

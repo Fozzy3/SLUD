@@ -61,14 +61,17 @@ export const searchSpeakers = async () => {
 }
 
 export const searchConferences = async () => {
-  const strapiResponse = await ((await fetch(`${API_URL}/conferences?sort=date`, { method: 'GET' })).json());
+  const strapiResponse = await ((await fetch(`${API_URL}/conferences?populate=speakers&sort=date`, { method: 'GET' })).json());
   const response = [];
+  console.log(strapiResponse)
   const conferences = strapiResponse.data;
   conferences.map((conference) => {
     if (conference) {
+      console.log(conference)
       const { id, attributes } = conference;
-      const { name, description, date, link } = attributes;
-      response.push({ id, name, description, date, link });
+      const { name, description, date, summary, link, speakers } = attributes;
+      const { data } = speakers;
+      response.push({ id, name, description, summary, date, link, speakers:data });
     }
   })
   return response;

@@ -25,7 +25,7 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto d-flex align-items-center">
-              <Link href="/sponsors" passHref>
+              <Link href="/sponsor" passHref>
                 <div className={`${styles.navItem} font-bold text-teal-200 hover:text-white px-4 py-2`}>
                   Sponsors
                 </div>
