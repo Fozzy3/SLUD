@@ -6,13 +6,12 @@ import AutoImport from "astro-auto-import";
 import { defineConfig, squooshImageService } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
-import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "https://fozzy3.github.io/SLUD",
-  base: config.site.base_path ? config.site.base_path : "/SLUD/",
-  trailingSlash: config.site.trailing_slash ? "always" : "never",
+  site: "https://fozzy3.github.io/SLUD", // URL completa del sitio
+  base: "/SLUD/", // Ruta base para los recursos
+  trailingSlash: "never",
   image: {
     service: squooshImageService(),
   },
@@ -26,13 +25,7 @@ export default defineConfig({
     }),
     AutoImport({
       imports: [
-        "@/shortcodes/Button",
-        "@/shortcodes/Accordion",
-        "@/shortcodes/Notice",
-        "@/shortcodes/Video",
-        "@/shortcodes/Youtube",
-        "@/shortcodes/Tabs",
-        "@/shortcodes/Tab",
+        "@/components/ImageMod.astro",
       ],
     }),
     mdx(),
