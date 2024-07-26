@@ -4,9 +4,16 @@ import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { getEntry } from "astro:content";
 
+interface TeamMember {
+  name: string;
+  role: string;
+  image: string;
+}
+
 const about = await getEntry("about", "-index");
 const { Content } = await about.render();
-const { title, description, meta_title, image } = about.data;
+const { title, description, meta_title, image, team, mission, vision } = about.data;
+const teamMembers: TeamMember[] = team;
 ---
 
 <Base
@@ -19,23 +26,50 @@ const { title, description, meta_title, image } = about.data;
     <div class="container">
       <div class="row justify-center">
         <div class="text-center md:col-10 lg:col-7">
-          {
-            image && (
-              <ImageMod
-                class="mx-auto mb-6 rounded-lg"
-                src={image}
-                width={200}
-                height={200}
-                alt={title}
-                format="webp"
-              />
-            )
-          }
+          {image && (
+            <ImageMod
+              class="mx-auto mb-6 rounded-lg"
+              src={image}
+              width={200}
+              height={200}
+              alt={title}
+              format="webp"
+            />
+          )}
           <h2 set:html={markdownify(title)} class="h3 mb-6" />
           <div class="content">
             <Content />
           </div>
         </div>
+      </div>
+      <div class="row justify-center mt-10">
+        <div class="col-12 md:col-10 lg:col-8">
+          <div class="text-left mb-10">
+            <h2 class="h4 mb-4">{mission.title}</h2>
+            <p class="mb-8 text-left">{mission.content}</p>
+            <h2 class="h4 mb-4">{vision.title}</h2>
+            <p class="text-justify">{vision.content}</p>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-center">
+        <h2 class="text-center h4 mb-4">Una pequeña parte del GLUD</h2>
+      </div>
+      <div class="row mt-10">
+        {teamMembers.map((person: TeamMember) => (
+          <div class="col-12 md:col-3 text-center mb-6" >
+            <ImageMod
+              class="mx-auto mb-3 rounded-full"
+              src={person.image}
+              width={150}
+              height={150}
+              alt={person.name}
+              format="webp"
+            />
+            <h3 class="h5 mb-2">{person.name}</h3>
+            <p>{person.role}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

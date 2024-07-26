@@ -36,7 +36,7 @@ input#nav-toggle:checked ~ #nav-menu {
 // }
 
 .nav-link {
-  @apply text-dark hover:text-primary dark:text-darkmode-dark dark:hover:text-darkmode-primary block p-3 font-semibold transition lg:px-2 lg:py-3;
+  @apply text-dark hover:text-darkmode-dark dark:text-darkmode-dark dark:hover:text-darkmode-primary block p-3 font-semibold transition lg:px-2 lg:py-3;
 }
 
 .nav-dropdown {
@@ -76,4 +76,12 @@ input#nav-toggle:checked ~ #nav-menu {
       @apply lg:left-4;
     }
   }
+}
+/* Custom styles for gradients */
+.border-gradient-light {
+  background: linear-gradient(36deg, #0378A6 0%, #038C5A 23%, #024959 100%) !important;
+}
+
+.border-gradient-dark {
+  background: linear-gradient(36deg, #2ABF6B 0%, #038C5A 23%, #024959 100%) !important;
 }

@@ -1,25 +1,36 @@
 ---
+import ImageMod from "@/components/ImageMod.astro";
 import Base from "@/layouts/Base.astro";
 ---
 
-<Base title="Page Not Found">
+<Base title="Página No Encontrada">
   <section class="section-sm text-center">
     <div class="container">
       <div class="row justify-center">
         <div class="sm:col-10 md:col-8 lg:col-6">
+          <ImageMod
+            class="mx-auto mb-6 rounded-lg"
+            src="/images/404.png"
+            width={200}
+            height={200}
+            alt="404"
+            format="webp"
+          />
           <span
             class="text-[8rem] block font-bold text-dark dark:text-darkmode-dark"
           >
             404
           </span>
-          <h1 class="h2 mb-4">Page not found</h1>
+          <h1 class="h2 mb-4">Página no encontrada</h1>
           <div class="content">
             <p>
-              The page you are looking for might have been removed, had its name
-              changed, or is temporarily unavailable.
+              La página que estás buscando podría haber sido eliminada, haber cambiado su nombre o estar temporalmente no disponible.
+            </p>
+            <p>
+              Mientras tanto, puedes explorar más sobre nuestro compromiso con el software libre y Linux. Visita nuestra <a href="/">página principal</a> para obtener más información.
             </p>
           </div>
-          <a href="/" class="btn btn-primary mt-8">Back to home</a>
+          <a href="/" class="btn btn-primary mt-8">Volver a la página principal</a>
         </div>
       </div>
     </div>

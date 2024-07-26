@@ -4,9 +4,9 @@ import Base from "@/layouts/Base.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 import { getEntry } from "astro:content";
 
-const contact = await getEntry("contact", "-index");
+const contacto = await getEntry("contact", "-index");
 const { contact_form_action }: { contact_form_action: string } = config.params;
-const { title, description, meta_title, image } = contact.data;
+const { title, description, meta_title, image } = contacto.data;
 ---
 
 <Base
@@ -20,43 +20,22 @@ const { title, description, meta_title, image } = contact.data;
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
+          <p class="text-center mb-6">Nuestro servidor está en mantenimiento. Por favor, deja tu correo electrónico y te contactaremos en cuanto esté disponible.</p>
           <form action={contact_form_action} method="POST">
             <div class="mb-6">
-              <label for="name" class="form-label">
-                Full Name <span class="text-red-500">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                class="form-input"
-                placeholder="John Doe"
-                type="text"
-              />
-            </div>
-            <div class="mb-6">
               <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
+                Correo Electrónico <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 class="form-input"
-                placeholder="john.doe@email.com"
+                placeholder="tu.correo@email.com"
                 type="email"
+                required
               />
             </div>
-            <div class="mb-6">
-              <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                class="form-input"
-                placeholder="Message goes here..."
-                rows="8"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
           </form>
         </div>
       </div>

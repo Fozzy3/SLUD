@@ -57,3 +57,8 @@ code {
 blockquote > p {
   @apply my-0 #{!important};
 }
+
+/* Custom styles for gradients */
+.border-gradient-light {
+  border-image: linear-gradient(36deg, #0378A6 0%, #038C5A 23%, #024959 100%) 1;
+}

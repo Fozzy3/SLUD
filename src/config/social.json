@@ -1,24 +1,39 @@
 {
   "main": [
-    {
-      "name": "facebook",
-      "icon": "FaFacebook",
-      "link": "https://www.facebook.com/"
-    },
-    {
-      "name": "twitter",
-      "icon": "FaTwitter",
-      "link": "https://twitter.com/"
-    },
-    {
-      "name": "github",
-      "icon": "FaGithub",
-      "link": "https://www.github.com/"
-    },
-    {
-      "name": "linkedin",
-      "icon": "FaLinkedin",
-      "link": "https://www.linkedin.com/"
-    }
-  ]
+  {
+    "name": "facebook",
+    "icon": "FaFacebook",
+    "link": "https://www.facebook.com/GrupoLinuxUD"
+  },
+  {
+    "name": "instagram",
+    "icon": "FaInstagram",
+    "link": "https://www.instagram.com/grupo_glud/"
+  },
+  {
+    "name": "twitter",
+    "icon": "FaTwitter",
+    "link": "https://twitter.com/GrupoGLUD"
+  },
+  {
+    "name": "linkedin",
+    "icon": "FaLinkedin",
+    "link": "https://www.linkedin.com/in/grupoglud/"
+  },
+  {
+    "name": "youtube",
+    "icon": "FaYoutube",
+    "link": "https://www.youtube.com/c/GrupoLinuxUniversidadDistrital"
+  },
+  {
+    "name": "twitch",
+    "icon": "FaTwitch",
+    "link": "https://www.twitch.tv/grupoglud"
+  },
+  {
+    "name": "tiktok",
+    "icon": "FaTiktok",
+    "link": "https://www.tiktok.com/@grupo_glud"
+  }
+]
 }

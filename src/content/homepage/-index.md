@@ -1,7 +1,7 @@
 ---
 banner:
   title: "SLUD 2024: Revoluciona tu Conocimiento en Ciencia de Datos"
-  content: "Únete a nosotros en el Evento Académico de Tecnología Libre SLUD 2024, donde exploraremos las últimas tendencias y avances en Ciencias de Datos. Desarrolla tus habilidades y conoce a expertos en el campo."
+  content: "  La XXI Edición del Evento de Software Libre, organizado por el grupo GLUD, se celebra en la Universidad Distrital Francisco José de Caldas en Bogotá, Colombia. Este año nos enfocamos en la Ciencia de Datos y su relación con el software libre. Invitamos a expertos en ciencia de datos con herramientas de código abierto a unirse y compartir sus experiencias."
   image: "/images/banner.png"
   button:
     enable: true
