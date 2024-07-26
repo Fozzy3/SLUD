@@ -2,15 +2,15 @@
   "main": [
     {
       "name": "Bienvenida",
-      "url": "/"
+      "url": "/SLUD/"
     },
     {
       "name": "Nosotros",
-      "url": "/about"
+      "url": "/SLUD/about"
     },
     {
       "name": "Contacto",
-      "url": "/contact"
+      "url": "/SLUD/contact"
     }
   ],
   "footer": [
