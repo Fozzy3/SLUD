@@ -1,8 +1,8 @@
-name: Deploy Astro site to Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["develop_carlos"] # Cambia "develop_carlos" si necesitas otro branch
+    branches: [ develop_carlos ]
   workflow_dispatch:
 
 permissions:
@@ -10,53 +10,26 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
-    name: Build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout your repository using git
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
         with:
-          node-version: "20"
-
-      - name: Cache npm dependencies
-        id: cache-npm-deps
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build with Astro
-        run: npm run build
-
-      - name: Create .nojekyll
-        run: echo > dist/.nojekyll
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+          path: . # The root location of your Astro project inside the repository
+          node-version: 20 # The specific version of Node that should be used to build your site
+          package-manager: npm@latest # Use npm as the package manager
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
