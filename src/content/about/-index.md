@@ -53,6 +53,9 @@ team:
 - name: "Sergio Páez"
   role: "Director Web"
   image: "/images/avatar.png"
+- name: "Dayaña Acuña"
+  role: "Rama Económica"
+  image: "/images/avatar.png"
 projects:
   - title: "Proyecto Innovación"
     content: "Desarrollo de tecnología libre eco-amigable."
