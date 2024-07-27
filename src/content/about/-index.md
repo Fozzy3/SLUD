@@ -1,11 +1,14 @@
 ---
 title: "Hola, Soy el GLUD!"
-meta_title: "About"
+meta_title: "about"
 description: "this is meta description"
 image: "/images/GLUD_LOGO_Round.png"
 draft: false
 definition: 
 title_team: "Una pequeña parte del GLUD"
+glud_description: "El Grupo de Trabajo Académico GNU/Linux - UD (GLUD) de la Universidad Distrital Francisco José de Caldas es una comunidad apasionada por la tecnología, la cultura y la ciencia libre. GLUD lidera la promoción y desarrollo de tecnologías libres, integrando el conocimiento libre al avance social y económico de Colombia. Su lema, 'Piensa Libre, Vive Libre. El Conocimiento Te hace Libre', destaca su compromiso con la educación continua, la innovación y el respeto por la diversidad y la naturaleza.
+
+Unirse a GLUD significa formar parte de un grupo de estudiantes y profesionales dedicados a la mejora personal y colectiva. Es un espacio donde la amistad, la humildad y el profesionalismo son fundamentales, y cada miembro tiene la oportunidad de aprender, crecer y contribuir a un mundo más libre y justo. En GLUD, creemos en compartir el conocimiento sin restricciones y trabajamos juntos para crear soluciones tecnológicas que beneficien a toda la sociedad."
 mission:
   title: "Nuestra Misión"
   content: "Promover el uso y desarrollo de tecnología, cultura y ciencia libre,

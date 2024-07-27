@@ -1,6 +1,7 @@
 ---
 enable: true
 title: "Eventos Destacados"
+id: "conferencias"
 description: "No te pierdas nuestras actividades más esperadas. Aquí están algunos de los eventos destacados que estaremos ofreciendo."
 
 # Testimonials

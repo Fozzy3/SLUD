@@ -1,6 +1,7 @@
 export type Feature = {
   button: button;
   image: string;
+  id: string;
   bulletpoints: string[];
   content: string;
   title: string;

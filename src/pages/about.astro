@@ -12,7 +12,7 @@ interface TeamMember {
 
 const about = await getEntry("about", "-index");
 const { Content } = await about.render();
-const { title, description, meta_title, image, team, mission, vision } = about.data;
+const { title, description, meta_title, image, glud_description, team, mission, vision } = about.data;
 const teamMembers: TeamMember[] = team;
 ---
 
@@ -40,6 +40,8 @@ const teamMembers: TeamMember[] = team;
           <div class="content">
             <Content />
           </div>
+          <p class="mb-8 text-justify">{glud_description}</p>
+
         </div>
       </div>
       <div class="row justify-center mt-10">

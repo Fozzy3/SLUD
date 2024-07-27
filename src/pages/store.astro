@@ -1,0 +1,50 @@
+---
+import config from "@/config/config.json";
+import Base from "@/layouts/Base.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import { getEntry } from "astro:content";
+
+const contacto = await getEntry("contact", "-index");
+const { contact_form_action }: { contact_form_action: string } = config.params;
+const { title, description, meta_title, image } = contacto.data;
+---
+
+<Base
+  title={title}
+  meta_title={meta_title}
+  description={description}
+  image={image}
+>
+  <PageHeader title={"Tienda"} />
+  <section class="section-sm">
+    <div class="container">
+      <div class="row">
+        <div class="mx-auto md:col-10 lg:col-6">
+          <p class="text-center mb-6">
+            Bienvenidos a nuestra tienda. Aquí puedes encontrar una variedad de productos disponibles.
+          </p>
+          <div class="flex justify-center">
+            <a class="btn mb-6 btn-primary" href="https://grupoglud.questionpro.com/t/AbH6cZ3cuj">
+              Comprar
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="row justify-center mt-10">
+        <div class="col-12 md:col-6 text-center mb-6">
+          <img src="/images/camisa-1.jpeg" alt="Camiseta Tux Frontal" class="mx-auto mb-3 rounded-lg" width="300" height="300" />
+          <img src="/images/camisa-2.jpeg" alt="Camiseta Tux Posterior" class="mx-auto mb-3 rounded-lg" width="300" height="300" />
+          <h3 class="h5 mb-2">Camiseta Tux</h3>
+          <p>Esta camiseta presenta un diseño de Tux, el pingüino de Linux, perfecto para los amantes del software libre. Confeccionada en algodón de alta calidad para mayor comodidad.</p>
+        </div>
+        <div class="col-12 md:col-6 text-center mb-6">
+          <img src="/images/camisa-3.jpeg" alt="Camiseta Linux Week Frontal" class="mx-auto mb-3 rounded-lg" width="300" height="300" />
+          <img src="/images/camisa-4.jpeg" alt="Camiseta Linux Week Posterior" class="mx-auto mb-3 rounded-lg" width="300" height="300" />
+          <h3 class="h5 mb-2">Camiseta Linux Week</h3>
+          <p>Únete a la celebración de la Linux Week con esta camiseta especial. Diseño único que destaca la importancia del software libre y la cultura abierta, hecha de materiales sostenibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

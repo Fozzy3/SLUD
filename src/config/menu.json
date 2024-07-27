@@ -2,7 +2,22 @@
   "main": [
     {
       "name": "Bienvenida",
-      "url": "/SLUD/"
+      "url": "/SLUD/",
+      "hasChildren": true,
+      "children": [
+        {
+          "name": "Bienvenida",
+          "url": "/SLUD/#bienvenida"
+        },
+        {
+          "name": "Sponsor",
+          "url": "/SLUD/#sponsor"
+        },
+        {
+          "name": "Ponente",
+          "url": "/SLUD/#ponente"
+        }
+      ]
     },
     {
       "name": "Nosotros",
@@ -11,6 +26,10 @@
     {
       "name": "Contacto",
       "url": "/SLUD/contact"
+    },
+    {
+      "name": "Tienda",
+      "url": "/SLUD/store"
     }
   ],
   "footer": [

@@ -12,6 +12,7 @@ interface Homepage {
   banner: {
     title: string;
     content: string;
+    id: string;
     image: string;
     button: Button;
   };
@@ -26,7 +27,7 @@ const { banner, features }: Homepage = homepage.data;
 
 <Base>
   <!-- Banner -->
-  <section class="section pt-14">
+  <section class="section pt-14" id={`${banner.id}`}>
     <div class="container">
       <div class="row justify-center">
         <div class="lg:col-7 md:col-9 mb-8 text-center">
@@ -72,7 +73,7 @@ const { banner, features }: Homepage = homepage.data;
   <!-- Features -->
   {
     features.map((feature, index: number) => (
-      <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
+      <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`} id={`${feature.id}`}>
         <div class="container">
           <div class="row items-center justify-between">
             <div
