@@ -9,8 +9,8 @@ import remarkToc from "remark-toc";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fozzy3.github.io/SLUD", // URL completa del sitio
-  // base: "/SLUD/", // Ruta base para los recursos
+  site: "https://fozzy3.github.io", // URL completa del sitio
+  // base: "/", // Ruta base para los recursos
   trailingSlash: "never",
   image: {
     service: squooshImageService(),

@@ -2,40 +2,40 @@
   "main": [
     {
       "name": "Bienvenida",
-      "url": "/SLUD/",
+      "url": "/",
       "hasChildren": true,
       "children": [
         {
           "name": "Bienvenida",
-          "url": "/SLUD/#bienvenida"
+          "url": "/#bienvenida"
         },
         {
           "name": "Sponsor",
-          "url": "/SLUD/#sponsor"
+          "url": "/#sponsor"
         },
         {
           "name": "Ponente",
-          "url": "/SLUD/#ponente"
+          "url": "/#ponente"
         }
       ]
     },
     {
       "name": "Nosotros",
-      "url": "/SLUD/about"
+      "url": "/about"
     },
     {
       "name": "Contacto",
-      "url": "/SLUD/contact"
+      "url": "/contact"
     },
     {
       "name": "Tienda",
-      "url": "/SLUD/store"
+      "url": "/store"
     }
   ],
   "footer": [
     {
       "name": "Política de privacidad",
-      "url": "/SLUD/privacy-policy"
+      "url": "/privacy-policy"
     }
   ]
 }
