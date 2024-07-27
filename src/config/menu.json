@@ -3,21 +3,7 @@
     {
       "name": "Bienvenida",
       "url": "/",
-      "hasChildren": true,
-      "children": [
-        {
-          "name": "Bienvenida",
-          "url": "/#bienvenida"
-        },
-        {
-          "name": "Sponsor",
-          "url": "/#sponsor"
-        },
-        {
-          "name": "Ponente",
-          "url": "/#ponente"
-        }
-      ]
+      "hasChildren": false
     },
     {
       "name": "Nosotros",
