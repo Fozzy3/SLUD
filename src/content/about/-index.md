@@ -56,7 +56,7 @@ team:
 - name: "Sergio Páez"
   role: "Director Web"
   image: "/images/avatar.png"
-- name: "Dayaña Acuña"
+- name: "Dayana Acuña"
   role: "Rama Económica"
   image: "/images/avatar.png"
 projects:
