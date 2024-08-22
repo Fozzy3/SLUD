@@ -6,24 +6,24 @@ description: "No te pierdas nuestras actividades más esperadas. Aquí están al
 
 # Testimonials
 testimonials:
-  - name: "Conferencia: El Futuro de la Tecnología Libre"
-    designation: "1 de Agosto, 2024"
-    avatar: "/images/event-1.png"
-    content: "Auditorio Principal"
+  - name: "Conferencia: Criollo OS una Distro Gnu Linux colombiana"
+    designation: "28 de Agosto, Miguel Acevedo"
+    avatar: "/images/criollo.jpg"
+    content: "Auditorio Principal - 4pm"
     
-  - name: "Taller: Desarrollo de Software Libre"
-    designation: "2 de Agosto, 2024"
-    avatar: "/images/event-2.png"
+  - name: "Conferencia: Astro, el Metaframework que Está Cambiando las Reglas del Juego"
+    designation: "28 de Agosto, Manuel Gil"
+    avatar: "/images/astro.jpg"
     content: "Sala de Talleres"
 
-  - name: "Panel de Discusión: Innovación y Cultura Libre"
-    designation: "3 de Agosto, 2024"
-    avatar: "/images/event-3.png"
-    content: "Salón de Conferencias"
+  - name: "Conferencia: Red Had, Introduccion y micro servicios"
+    designation: "28 de Agosto, Saenz Diego"
+    avatar: "/images/redhad.png"
+    content: "Auditorio Principal - 4pm"
     
-  - name: "Networking y Proyectos Colaborativos"
-    designation: "4 de Agosto, 2024"
-    avatar: "/images/event-4.png"
-    content: "Zona de Networking"
+  - name: "Networking y Clone Hero"
+    designation: "27 de Agosto, GLUD"
+    avatar: "/images/cloneHero.png"
+    content: "Sala Glud - 2pm"
 
 ---
